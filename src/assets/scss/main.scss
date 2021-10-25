@@ -1,0 +1,29 @@
+// abstracts
+@import "abstracts/functions";
+@import "abstracts/variables";
+
+// vendors
+// @import "vendors/fontawesome/css/fontawesome.min.css";
+
+@import "base/typography";
+@import "base/reset";
+
+@import "layout/banner";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/nav";
+@import "layout/breadcrumb";
+
+@import "components/buttons";
+@import "components/modal";
+@import "components/walletmodal";
+@import "components/form";
+
+@import "pages/home";
+@import "pages/contact";
+@import "pages/coming_soon";
+@import "pages/roadmap";
+@import "pages/market";
+
+
+@import 'themes/theme';

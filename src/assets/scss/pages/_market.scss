@@ -1,0 +1,21 @@
+.market-search {
+    margin-bottom: 80px;
+    input {
+        height: 84px;
+        border-radius: 20px;
+        width: 100%;
+        border: 0;
+        background-color: white;
+        font-size: 20px;
+        line-height: 84px;
+        padding: 5px 30px;
+        box-sizing: border-box;
+        font-family: $font;
+    }
+}
+
+.market-section {
+    .index-header {
+        padding-bottom: 0px;
+    }
+}

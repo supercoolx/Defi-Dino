@@ -1,0 +1,37 @@
+.no-data {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h3 {
+        max-width: 700px;
+        font-size: 40px;
+        color: white;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    @include mq('tablet-wide', max){
+        height: 400px;
+        h3 {
+            font-size: 32px;
+            max-width: 500px;
+        }
+    }
+
+    @include mq('tablet', max){
+        height: 300px;
+        h3 {
+            font-size: 26px;
+            max-width: 400px;
+        }
+    }
+    @include mq('phablet', max){
+        height: 300px;
+        padding: 20px;
+        box-sizing: border-box;
+        h3 {
+            font-size: 22px;
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,116 @@
+section.roadmap {
+  padding: 70px 0 0;
+  h2 {
+    font-size: 60px;
+    color: $white;
+  }
+  .roadmap-items {
+    margin-top: 100px;
+    .roadmap-item {
+      display: flex;
+      margin-bottom: 100px;
+      align-items: center;
+      .progress {
+        flex: 0 0 100px;
+        width: 100px;
+        height: 100px;
+        border: 4px solid $white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        font-size: 34px;
+        margin-right: 50px;
+      }
+      .info {
+        flex: 1;
+        h5, p {
+          font-size: 40px;
+          color: white;
+          font-family: $font2;
+          line-height: normal;
+        }
+        h5 {
+          font-weight: 600;
+        }
+        p {
+          margin-bottom: 0;
+          font-weight: 300;
+          span {
+            color: #8DA635;
+          }
+        }
+      }
+    }
+  }
+  @include mq('tablet-wide', max){
+    h2 {
+        font-size: 40px;
+    }
+    .roadmap-items {
+        margin-top: 70px;
+        .roadmap-item {
+            margin-bottom: 70px;
+            .progress {
+                margin-right: 50px;
+                flex: 0 0 95px;
+                width: 95px;
+                height: 95px;
+                font-size: 27px;
+            } 
+            .info h5, 
+            .info p {
+                font-size: 30px;
+                line-height: normal;
+            }
+        }
+    }
+  }
+  @include mq('tablet', max){
+    padding-top: 50px;
+    h2 {
+        font-size: 40px;
+    }
+    .roadmap-items {
+        margin-top: 50px;
+        .roadmap-item {
+            margin-bottom: 40px;
+            .progress {
+                margin-right: 30px;
+                flex: 0 0 70px;
+                width: 70px;
+                height: 70px;
+                font-size: 22px;
+            } 
+            .info h5, 
+            .info p {
+                font-size: 24px;
+            }
+        }
+    }
+  }
+  @include mq('phablet', max){
+    padding-top: 40px;
+    h2 {
+        font-size: 28px;
+    }
+    .roadmap-items {
+        margin-top: 40px;
+        .roadmap-item {
+            margin-bottom: 30px;
+            .progress {
+                margin-right: 20px;
+                flex: 0 0 60px;
+                width: 60px;
+                height: 60px;
+                font-size: 20px;
+            } 
+            .info h5, 
+            .info p {
+                font-size: 18px;
+            }
+        }
+    }
+  }
+}

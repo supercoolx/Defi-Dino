@@ -1,0 +1,81 @@
+.wallets {
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+  li {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  li:hover {
+    border-color: black;
+  }
+  .walleticon {
+    width: 30px;
+    margin-left: 30px;
+  }
+}
+.account_detail {
+  display: flex;
+  align-items: center;
+}
+.jazzicon {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.disconnect_button {
+  background-color: transparent;
+  padding: 5px 10px;
+  border: 2px solid #d0410a;
+  border-radius: 5px;
+  margin-left: 30px;
+  color: #d0410a;
+  font-size: 12px;
+  font-family: 'Dinosaur';
+  cursor: pointer;
+}
+.transactions_container {
+  margin-top: 10px;
+}
+.transactions {
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .summery {
+    cursor: pointer;
+    color: #212529;
+    display: flex;
+    align-items: center;
+    img {
+      width: 20px;
+      margin-left: 10px;
+    }
+  }
+}
+.loader {
+  border: 3px solid #f3f3f3; /* Light grey */
+  border-top: 3px solid #ffa035; /* Blue */
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

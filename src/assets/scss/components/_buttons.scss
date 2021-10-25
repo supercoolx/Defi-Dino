@@ -1,0 +1,85 @@
+.dinos {
+    button {
+        background: #FFA035;
+        border: 6px solid #D0410A;
+        box-shadow: 0px 1px 0px #FFFFFF, 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        padding: 15px 46px;
+        display: inline-block;
+        text-align: center;
+        font-size: 48px;
+        font-family: 'Dinosaur';
+        color: #fff;
+        -webkit-text-stroke: 4px #D0410A;
+        cursor: pointer;
+    }
+}
+
+
+.element-box-inner {
+    button {
+        background: #FFA035;
+        border: 6px solid #D0410A;
+        box-shadow: 0px 1px 0px #FFFFFF, 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        padding: 5px 46px;
+        display: inline-block;
+        text-align: center;
+        font-size: 48px;
+        font-family: 'Dinosaur';
+        color: #fff;
+        -webkit-text-stroke: 4px #D0410A;
+        cursor: pointer;
+    }
+    
+    button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+}
+
+.connect-box {
+    button {
+        padding: 12px 40px;
+        background: radial-gradient(50% 50% at 50% 50%, #FECC35 0%, #FE9B35 100%);
+        border: 4px solid #FFFFFF;
+        box-shadow: 0px 4px 4px #D04009;
+        border-radius: 40px;
+        font-family: 'Baloo Da 2', 'cursive';
+        color: #fff;
+        font-weight: 600;
+        font-size: 24px;
+        cursor: pointer;
+
+    }
+    &.disconnected {
+      button {
+        position: relative;
+        padding-left: 50px;
+        &::after {
+          content: '';
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          border: 3px solid $white;
+          background-color: #D0410A;
+        }
+      }
+    }
+}
+
+
+button.highlight {
+    background-color: #FFA035;
+    border: 5px solid #D0410A;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px 15px;
+    font-family: $font;
+    color: white;
+    overflow: hidden;
+}

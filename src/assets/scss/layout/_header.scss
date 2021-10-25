@@ -1,0 +1,66 @@
+header.navbar {
+  background-color: $black;
+  padding: 30px 0;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+      margin-bottom: 0;
+      flex: 0 1 60%;
+      display: flex;
+      justify-content: space-between;
+      li{
+        &:last-child {
+          margin-right: 0px;
+        }
+        a {
+          font-size: 30px;
+          color: $lightBlack;
+          &:hover {
+            color: $white;
+          } 
+        }
+      }
+    }
+    @include mq('tablet-wide', max){
+        flex-wrap: wrap;
+        ul {
+            flex: 0 1 100%;
+        }
+    }
+    @include mq('tablet', max){
+        ul li a {
+            font-size: 22px;
+        }
+    }
+    @include mq('phablet', max){
+        ul {
+            // flex: 0 0 420px;
+            flex: 1 0 100%;
+            flex-wrap: wrap;
+            li a {
+                font-size:  18px;
+                padding: 2px 8px
+            }
+        } 
+    }
+    .actions {
+        // margin-left: 150px;
+        display: flex;
+        justify-content: flex-end;
+    }
+  }
+  .connect-box  {
+      padding-top: 0;
+      @include mq('tablet-wide', max){
+          margin-top: 30px;
+      }
+      @include mq('tablet', max){
+          button {
+            padding: 6px 20px 6px 40px;
+            font-size: 18px;
+          }
+      }
+  }
+}

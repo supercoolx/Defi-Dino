@@ -1,0 +1,202 @@
+.dino-modal {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0,0.7);
+    // visibility: hidden;
+    overflow: hidden;
+    transform: scale(0);
+    transition: all 0.3s linear;
+    &.active {
+      visibility: visible;
+      transform: scale(1);
+    }
+    .modal-content {
+        width: 900px;
+        background-color: white;
+        border-radius: 30px;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 27px 23px;
+        position: relative;
+
+        .icon {
+          width: 50px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          right: 0;
+          top: 0;
+          border: 1px solid transparent;
+          cursor: pointer;
+          &:focus {
+            border-color: #a1a1a1;
+          }
+        }
+        .dino-modal-content {
+            display: flex;
+            justify-content: flex-start;
+            .dino-card {
+                max-width: 380px;
+                border: 5px solid #000000;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                margin: 0;
+                margin-right: 40px;
+            }   
+            .dino-content {
+                h2 {
+                    font-size: 26px;
+                    margin-bottom: 10px;
+                    color: #000000;
+                }
+                table {
+                    border: 0;
+                    th, td {
+                        padding:3px 10px;
+                        font-size: 20px;
+                        text-align: left;
+                    }
+                }
+                .sell-dino {
+                    margin-top: 20px;
+                    .quantity {
+                        margin-left: 15px;
+                        input {
+                            width: 85px;
+                            border: 5px solid #000000;
+                            border-radius: 10px;
+                            padding: 5px 15px;
+                            box-sizing: border-box;
+                            margin-right: 10px;
+                            text-align: center;
+                            font-family: $font;
+                            appearance: none;
+                        }
+                        label, input {
+                            font-size: 20px;
+                        }
+                    }
+                    button {
+                        margin-left: 15px;
+                        margin-top: 20px;
+                    }
+                }
+                .transfer-wallet {
+                    .quantity {
+                        input {
+                            width: 240px;
+                        }
+                        button {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+        @include mq('tablet-wide', max){
+            width: calc(100% - 20px);
+            .dino-modal-content {
+                flex-wrap: wrap;
+                justify-content: center;
+                .dino-card {
+                    margin-right: 0px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        @include mq('tablet', max){
+            .dino-modal-content {
+                .dino-content {
+                    h2 {
+                        font-size: 20px;
+                    }
+                    table td, table tr {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modal {
+    background: #FFFFFF;
+    box-shadow: 2px 2px 20px 1px;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-header,
+  .modal-footer {
+    padding: 15px;
+    display: flex;
+  }
+
+  .modal-header {
+    position: relative;
+    border-bottom: 1px solid #eeeeee;
+    color: #4AAE9B;
+    justify-content: space-between;
+  }
+
+  .modal-footer {
+    border-top: 1px solid #eeeeee;
+    flex-direction: column;
+  }
+
+  .modal-body {
+    position: relative;
+    padding: 20px 10px;
+  }
+
+  .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #4AAE9B;
+    background: transparent;
+  }
+
+  .btn-green {
+    color: white;
+    background: #4AAE9B;
+    border: 1px solid #4AAE9B;
+    border-radius: 2px;
+  }
+
+  .modal-fade-enter,
+  .modal-fade-leave-to {
+    opacity: 0;
+  }
+
+  .modal-fade-enter-active,
+  .modal-fade-leave-active {
+    transition: opacity .5s ease;
+  }

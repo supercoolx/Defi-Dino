@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+img {
+    border: 0;
+    outline: 0;
+    max-width: 100%;
+}
+
+body {
+    background: $bgColor;
+    background: linear-gradient(180deg, #151806 1%, #131701 100%) fixed;
+    font-family: $font;
+}
+
+a {
+    display: inline-block;
+    color: $lightBlack;
+    @include animate(.3s);
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+p {
+    color: $black;
+    line-height: 24px;
+}
+
+.color {
+    color: $color;
+}
+
+.container {
+    box-sizing: border-box;
+}
+
+.img-fluid {
+    max-width: 100%;
+}
